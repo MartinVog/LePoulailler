@@ -1,0 +1,5 @@
+﻿.btn {
+  -webkit-box-shadow: 1px 1px 1px red;
+  -moz-box-shadow: 1px 1px 1px red;
+  box-shadow: 1px 1px 1px red;
+}
