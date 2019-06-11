@@ -5,6 +5,14 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LePoulailler", "LePoulailler\LePoulailler.csproj", "{D989EB57-F8BB-4BA3-BC50-49B52E493C42}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{1CB45DAE-C161-420C-8588-F3FFC6BC20EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALIngredient", "ClassLibrary1\DALIngredient.csproj", "{32E6663E-3F53-4A14-B016-56270E04F099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALBase", "DALBase\DALBase.csproj", "{58824F4F-7724-4164-8CFE-6AAF75A74108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALSandwich", "DALSandwich\DALSandwich.csproj", "{4844994F-DE73-459F-940E-423E999AE352}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +23,26 @@ Global
 		{D989EB57-F8BB-4BA3-BC50-49B52E493C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D989EB57-F8BB-4BA3-BC50-49B52E493C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D989EB57-F8BB-4BA3-BC50-49B52E493C42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32E6663E-3F53-4A14-B016-56270E04F099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E6663E-3F53-4A14-B016-56270E04F099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E6663E-3F53-4A14-B016-56270E04F099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E6663E-3F53-4A14-B016-56270E04F099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58824F4F-7724-4164-8CFE-6AAF75A74108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58824F4F-7724-4164-8CFE-6AAF75A74108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58824F4F-7724-4164-8CFE-6AAF75A74108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58824F4F-7724-4164-8CFE-6AAF75A74108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4844994F-DE73-459F-940E-423E999AE352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4844994F-DE73-459F-940E-423E999AE352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4844994F-DE73-459F-940E-423E999AE352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4844994F-DE73-459F-940E-423E999AE352}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32E6663E-3F53-4A14-B016-56270E04F099} = {1CB45DAE-C161-420C-8588-F3FFC6BC20EB}
+		{58824F4F-7724-4164-8CFE-6AAF75A74108} = {1CB45DAE-C161-420C-8588-F3FFC6BC20EB}
+		{4844994F-DE73-459F-940E-423E999AE352} = {1CB45DAE-C161-420C-8588-F3FFC6BC20EB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C981057-4E3E-44C1-B684-A831CE9E0189}
