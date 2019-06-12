@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace LePoulailler.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : _BaseController
     {
         public ActionResult Index()
         {

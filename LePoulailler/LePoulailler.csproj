@@ -140,6 +140,8 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IngredientController.cs" />
+    <Compile Include="Controllers\SandwichController.cs" />
+    <Compile Include="Controllers\_BaseController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -955,6 +957,7 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\NgDialog\ngDialog.js" />
     <Content Include="Scripts\NgDialog\ngDialog.min.js" />
+    <Content Include="Scripts\script Angular\Sandwich.js" />
     <Content Include="Scripts\script Angular\Core.js" />
     <Content Include="Scripts\sitemap.xml" />
     <Content Include="Scripts\test-bundles\angular-aria.js" />
@@ -985,10 +988,13 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Ingredient\Index.cshtml" />
     <Content Include="Views\Ingredient\Edition.cshtml" />
+    <Content Include="Views\Sandwich\Index.cshtml" />
+    <Content Include="Views\Sandwich\Edition.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\_Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -998,6 +1004,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DALSandwich\DALSandwich.csproj">
+      <Project>{4844994F-DE73-459F-940E-423E999AE352}</Project>
+      <Name>DALSandwich</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

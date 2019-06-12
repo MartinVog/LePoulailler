@@ -27,7 +27,7 @@ namespace DALIngredient
 
         public EOIngredient(MySqlDataReader reader,string platName)
         {
-            Id = DBTools.GetInt64(reader, "id");
+            Id = DBTools.GetInt64(reader, "ingredient_id");
             Name = DBTools.GetString(reader, "name");
             Code = DBTools.GetString(reader, "code");
             MediumPrice = DBTools.GetDecimal(reader, "medium_price");

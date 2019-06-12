@@ -32,9 +32,9 @@ namespace DALSandwich
             Id = DBTools.GetInt64(reader, "id");
             Name = DBTools.GetString(reader, "name");
             Code = DBTools.GetString(reader, "code");
-            MediumPrice = DBTools.GetDecimalNull(reader, "price");
-            BigPrice = DBTools.GetDecimalNull(reader, "price");
-            MaxiPrice = DBTools.GetDecimalNull(reader, "price");
+            MediumPrice = DBTools.GetDecimalNull(reader, "medium_price");
+            BigPrice = DBTools.GetDecimalNull(reader, "big_price");
+            MaxiPrice = DBTools.GetDecimalNull(reader, "maxi_price");
 
             Type = (TypeSandwich)DBTools.GetInt32(reader, "type");
             TypeTraduction = GetTraductionType(Type);

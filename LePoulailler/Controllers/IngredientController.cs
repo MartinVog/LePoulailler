@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace LePoulailler.Controllers
 {
-    public class IngredientController : Controller
+    public class IngredientController : _BaseController
     {
         // GET: Ingredient
         public ActionResult Index()

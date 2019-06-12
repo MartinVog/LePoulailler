@@ -23,14 +23,14 @@ namespace DALSandwich
         {
             using (var command = Connexion.CreateCommand())
             {
-                command.CommandText = @"insert into sandwich (name,code,price,type)
-                                        values(@Name,@Code,@Price,@Type);SELECT LAST_INSERT_ID();";
+                command.CommandText = @"insert into sandwich (name,code,medium_price,big_price,maxi_price,type)
+                                        values(@Name,@Code,@MediumPrice,@BigPrice,@MaxiPrice,@Type);SELECT LAST_INSERT_ID();";
 
                 command.Parameters.AddWithValue("Name", sandwich.Name);
                 command.Parameters.AddWithValue("Code", sandwich.Code);
-                command.Parameters.AddWithValue("Price", sandwich.MediumPrice);
-                command.Parameters.AddWithValue("Price", sandwich.BigPrice);
-                command.Parameters.AddWithValue("Price", sandwich.MaxiPrice);
+                command.Parameters.AddWithValue("MediumPrice", sandwich.MediumPrice);
+                command.Parameters.AddWithValue("BigPrice", sandwich.BigPrice);
+                command.Parameters.AddWithValue("MaxiPrice", sandwich.MaxiPrice);
                 command.Parameters.AddWithValue("Type", sandwich.Type);
 
                 sandwich.Id = Convert.ToInt64(command.ExecuteScalar());
@@ -45,14 +45,14 @@ namespace DALSandwich
         {
             using (var command = Connexion.CreateCommand())
             {
-                command.CommandText = "update sandwich set name=@Name, code=@Code, price=@Price, type=@Type where id = @Id;";
+                command.CommandText = "update sandwich set name=@Name, code=@Code, medium_price=@MediumPrice, big_price=@BigPrice, maxi_price=@MaxiPrice, type=@Type where id = @Id;";
 
                 command.Parameters.AddWithValue("Id", sandwich.Id);
                 command.Parameters.AddWithValue("Name", sandwich.Name);
                 command.Parameters.AddWithValue("Code", sandwich.Code);
-                command.Parameters.AddWithValue("Price", sandwich.MediumPrice);
-                command.Parameters.AddWithValue("Price", sandwich.BigPrice);
-                command.Parameters.AddWithValue("Price", sandwich.MaxiPrice);
+                command.Parameters.AddWithValue("MediumPrice", sandwich.MediumPrice);
+                command.Parameters.AddWithValue("BigPrice", sandwich.BigPrice);
+                command.Parameters.AddWithValue("MaxiPrice", sandwich.MaxiPrice);
                 command.Parameters.AddWithValue("Type", sandwich.Type);
                 command.ExecuteScalar();
             }
@@ -85,7 +85,7 @@ namespace DALSandwich
 
             using (var command = Connexion.CreateCommand())
             {
-                command.CommandText = @"SELECT id,name,code,price,type from sandwich;";
+                command.CommandText = @"SELECT id,name,code,medium_price,big_price,maxi_price,type from sandwich;";
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -142,7 +142,7 @@ namespace DALSandwich
 
             using (var command = Connexion.CreateCommand())
             {
-                command.CommandText = $"select * from sandwich_ingredient si,ingredient i where i.id = si.sandwich_id and sandwich_id in ({ string.Join(",", sandwichIdsList)})";
+                command.CommandText = $"select * from sandwich_ingredient si,ingredient i where i.id = si.ingredient_id and sandwich_id in ({ string.Join(",", sandwichIdsList)})";
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
